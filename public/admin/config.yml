@@ -1,0 +1,105 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"   # Where images are saved in the repo
+public_folder: "/uploads"        # How the site will reference them
+
+site_url: "/"                    # optional but safe
+
+collections:
+  - name: "home"
+    label: "Home"
+    editor:
+      preview: false
+    files:
+      - file: "public/data/home.json"
+        label: "Home Page Content"
+        name: "homecontent"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "CTA Label", name: "heroCta", widget: "string", default: "Shop now" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - label: "Promos"
+            name: "promos"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Link", name: "link", widget: "string" }
+
+  - name: "categories"
+    label: "Categories"
+    label_singular: "Category"
+    editor:
+      preview: false
+    files:
+      - file: "public/data/categories.json"
+        label: "Categories List"
+        name: "categorieslist"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Color", name: "color", widget: "string", default: "#e3b26c" }
+
+  - name: "products"
+    label: "Products"
+    label_singular: "Product"
+    editor:
+      preview: false
+    files:
+      - file: "public/data/products.json"
+        label: "Products List"
+        name: "productslist"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Category Slug", name: "category", widget: "string" }
+              - { label: "Price", name: "price", widget: "number", value_type: "int" }
+              - { label: "Sale Price", name: "salePrice", widget: "number", value_type: "int", required: false }
+              - label: "Badges"
+                name: "badges"
+                widget: "list"
+                required: false
+                field: { label: "Badge", name: "badge", widget: "string" }
+              - label: "Variants"
+                name: "variants"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Type", name: "type", widget: "select", options: ["dropdown"], default: "dropdown" }
+                  - label: "Options"
+                    name: "options"
+                    widget: "list"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "Value", name: "value", widget: "string" }
+                      - { label: "Price Delta", name: "priceDelta", widget: "number", value_type: "int", default: 0 }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                field: { label: "Image", name: "image", widget: "image" }
+              - { label: "SKU", name: "sku", widget: "string", required: false }
+              - { label: "Brand", name: "brand", widget: "string", default: "CookieCraft", required: false }
+              - { label: "In Stock", name: "inStock", widget: "boolean", default: true }
+              - label: "Attributes"
+                name: "attributes"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+              - { label: "Short Description", name: "shortDesc", widget: "text", required: false }
+              - { label: "Long Description", name: "longDesc", widget: "text", required: false }
