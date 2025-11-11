@@ -1,28 +1,32 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 import Shop from "./pages/Shop";
+import Product from "./pages/Product";
+import Cart from "./pages/Cart";
+import Wishlist from "./pages/Wishlist";
+import Compare from "./pages/Compare";
 
-function Home() {
-  return (
-    <div style={{fontFamily:"system-ui", padding:"24px"}}>
-      <h1>CookieCraft</h1>
-      <p>Your cookies storefront is live ✅</p>
-      <p><Link to="/shop">Go to Shop</Link></p>
-    </div>
-  );
-}
-
-export default function App() {
+export default function App(){
   return (
     <BrowserRouter>
-      <nav style={{padding:"12px 16px", borderBottom:"1px solid #eee"}}>
-        <Link to="/" style={{marginRight:12}}>Home</Link>
-        <Link to="/shop">Shop</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-      </Routes>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/shop" element={<Shop/>} />
+          <Route path="/product/:slug" element={<Product/>} />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="/wishlist" element={<Wishlist/>} />
+          <Route path="/compare" element={<Compare/>} />
+          <Route path="*" element={<div style={{padding:24}}>Not found — <Link to="/">Go Home</Link></div>} />
+        </Routes>
+      </main>
+      <Footer />
     </BrowserRouter>
   );
 }
+
+

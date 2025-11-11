@@ -1,0 +1,12 @@
+{
+  "heroTitle": "Freshly Baked, Always Delicious",
+  "heroSubtitle": "Handcrafted cookies made with real butter and premium chocolate.",
+  "heroCta": "Shop now",
+  "heroImage": "/icons/icon-512.png",
+  "promos": [
+    { "title": "Chocolate Chunk", "subtitle": "Thick & gooey", "image": "/icons/icon-192.png", "link": "/shop?category=classic" },
+    { "title": "Assorted Box", "subtitle": "Perfect gifts", "image": "/icons/icon-192.png", "link": "/shop" },
+    { "title": "Vegan Delights", "subtitle": "Plant-powered", "image": "/icons/icon-192.png", "link": "/shop?category=vegan" },
+    { "title": "Protein Cookies", "subtitle": "Snack smart", "image": "/icons/icon-192.png", "link": "/shop?category=protein" }
+  ]
+}

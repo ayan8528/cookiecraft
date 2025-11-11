@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "name": "Classic", "slug": "classic", "color": "#e3b26c" },
+    { "name": "Vegan", "slug": "vegan", "color": "#88c057" },
+    { "name": "Gluten-Free", "slug": "gluten-free", "color": "#b48cc6" },
+    { "name": "Protein", "slug": "protein", "color": "#6fb1e7" }
+  ]
+}

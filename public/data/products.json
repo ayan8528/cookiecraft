@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "id": "ck-001",
+      "title": "Classic Chocolate Chunk",
+      "slug": "classic-chocolate-chunk",
+      "category": "classic",
+      "price": 199,
+      "salePrice": 179,
+      "badges": ["Hot","Sale"],
+      "variants": [
+        {
+          "name": "Pack",
+          "type": "dropdown",
+          "options": [
+            {"label":"Pack of 2","value":"2","priceDelta":0},
+            {"label":"Pack of 6","value":"6","priceDelta":150},
+            {"label":"Pack of 12","value":"12","priceDelta":350}
+          ]
+        }
+      ],
+      "images": ["/icons/icon-512.png"],
+      "sku": "CK-001",
+      "brand": "CookieCraft",
+      "inStock": true,
+      "attributes": [{"name":"Weight","value":"75g each"}],
+      "shortDesc": "Buttery cookie loaded with premium chocolate chunks.",
+      "longDesc": "Baked fresh daily with French butter, 54% dark chocolate, and Madagascar vanilla."
+    },
+    {
+      "id": "ck-002",
+      "title": "Vegan Double Choc",
+      "slug": "vegan-double-choc",
+      "category": "vegan",
+      "price": 219,
+      "badges": ["New"],
+      "variants": [
+        {
+          "name": "Pack",
+          "type": "dropdown",
+          "options": [
+            {"label":"Pack of 2","value":"2","priceDelta":0},
+            {"label":"Pack of 6","value":"6","priceDelta":160}
+          ]
+        }
+      ],
+      "images": ["/icons/icon-512.png"],
+      "sku": "CK-002",
+      "brand": "CookieCraft",
+      "inStock": true,
+      "attributes": [{"name":"Weight","value":"70g each"}],
+      "shortDesc": "Rich cocoa cookie made 100% plant-based.",
+      "longDesc": "Zero dairy, zero compromise. Deep chocolate flavor, crispy edges, chewy center."
+    },
+    {
+      "id": "ck-003",
+      "title": "Gluten-Free Almond",
+      "slug": "gluten-free-almond",
+      "category": "gluten-free",
+      "price": 249,
+      "badges": ["Hot"],
+      "variants": [
+        {
+          "name": "Pack",
+          "type": "dropdown",
+          "options": [
+            {"label":"Pack of 2","value":"2","priceDelta":0},
+            {"label":"Pack of 6","value":"6","priceDelta":180}
+          ]
+        }
+      ],
+      "images": ["/icons/icon-512.png"],
+      "sku": "CK-003",
+      "brand": "CookieCraft",
+      "inStock": true,
+      "attributes": [{"name":"Weight","value":"65g each"}],
+      "shortDesc": "Almond flour base, golden and fragrant.",
+      "longDesc": "Naturally gluten-free and rich in almond goodness."
+    }
+  ]
+}
