@@ -1,3 +1,4 @@
+
 {
   "items": [
     {
@@ -21,11 +22,13 @@
       ],
       "images": ["/icons/icon-512.png"],
       "sku": "CK-001",
-      "brand": "CookieCraft",
+      "brand": "CrazeeFood",
       "inStock": true,
       "attributes": [{"name":"Weight","value":"75g each"}],
       "shortDesc": "Buttery cookie loaded with premium chocolate chunks.",
-      "longDesc": "Baked fresh daily with French butter, 54% dark chocolate, and Madagascar vanilla."
+      "longDesc": "Baked fresh daily with French butter, 54% dark chocolate, and Madagascar vanilla.",
+      "dateAdded": "2025-11-12",
+      "hidden": false
     },
     {
       "id": "ck-002",
@@ -33,6 +36,7 @@
       "slug": "vegan-double-choc",
       "category": "vegan",
       "price": 219,
+      "salePrice": null,
       "badges": ["New"],
       "variants": [
         {
@@ -46,11 +50,13 @@
       ],
       "images": ["/icons/icon-512.png"],
       "sku": "CK-002",
-      "brand": "CookieCraft",
+      "brand": "CrazeeFood",
       "inStock": true,
       "attributes": [{"name":"Weight","value":"70g each"}],
       "shortDesc": "Rich cocoa cookie made 100% plant-based.",
-      "longDesc": "Zero dairy, zero compromise. Deep chocolate flavor, crispy edges, chewy center."
+      "longDesc": "Zero dairy, zero compromise. Deep chocolate flavor, crispy edges, chewy center.",
+      "dateAdded": "2025-11-12",
+      "hidden": false
     },
     {
       "id": "ck-003",
@@ -58,6 +64,7 @@
       "slug": "gluten-free-almond",
       "category": "gluten-free",
       "price": 249,
+      "salePrice": null,
       "badges": ["Hot"],
       "variants": [
         {
@@ -71,11 +78,97 @@
       ],
       "images": ["/icons/icon-512.png"],
       "sku": "CK-003",
-      "brand": "CookieCraft",
+      "brand": "CrazeeFood",
       "inStock": true,
       "attributes": [{"name":"Weight","value":"65g each"}],
       "shortDesc": "Almond flour base, golden and fragrant.",
-      "longDesc": "Naturally gluten-free and rich in almond goodness."
+      "longDesc": "Naturally gluten-free and rich in almond goodness.",
+      "dateAdded": "2025-11-12",
+      "hidden": false
+    },
+    {
+      "id": "ck-004",
+      "title": "Salted Caramel Butter",
+      "slug": "salted-caramel-butter",
+      "category": "classic",
+      "price": 229,
+      "salePrice": 199,
+      "badges": ["Bestseller"],
+      "variants": [
+        {
+          "name": "Pack",
+          "type": "dropdown",
+          "options": [
+            {"label":"Pack of 2","value":"2","priceDelta":0},
+            {"label":"Pack of 6","value":"6","priceDelta":170}
+          ]
+        }
+      ],
+      "images": ["/icons/icon-512.png"],
+      "sku": "CK-004",
+      "brand": "CrazeeFood",
+      "inStock": true,
+      "attributes": [{"name":"Weight","value":"80g each"}],
+      "shortDesc": "Golden cookie with a soft salted caramel center.",
+      "longDesc": "A buttery cookie balanced by a soft caramel heart and a pinch of sea salt.",
+      "dateAdded": "2025-11-12",
+      "hidden": false
+    },
+    {
+      "id": "ck-005",
+      "title": "Oat & Raisin Crunch",
+      "slug": "oat-raisin-crunch",
+      "category": "classic",
+      "price": 159,
+      "salePrice": null,
+      "badges": [],
+      "variants": [
+        {
+          "name": "Pack",
+          "type": "dropdown",
+          "options": [
+            {"label":"Pack of 2","value":"2","priceDelta":0},
+            {"label":"Pack of 6","value":"6","priceDelta":120}
+          ]
+        }
+      ],
+      "images": ["/icons/icon-512.png"],
+      "sku": "CK-005",
+      "brand": "CrazeeFood",
+      "inStock": true,
+      "attributes": [{"name":"Weight","value":"70g each"}],
+      "shortDesc": "A crunchy, wholesome cookie with plump raisins.",
+      "longDesc": "Made with whole oats and naturally sweet raisins for a wholesome snack.",
+      "dateAdded": "2025-11-12",
+      "hidden": false
+    },
+    {
+      "id": "ck-006",
+      "title": "Protein Peanut Butter",
+      "slug": "protein-peanut-butter",
+      "category": "protein",
+      "price": 279,
+      "salePrice": 249,
+      "badges": ["Protein"],
+      "variants": [
+        {
+          "name": "Pack",
+          "type": "dropdown",
+          "options": [
+            {"label":"Pack of 2","value":"2","priceDelta":0},
+            {"label":"Pack of 6","value":"6","priceDelta":200}
+          ]
+        }
+      ],
+      "images": ["/icons/icon-512.png"],
+      "sku": "CK-006",
+      "brand": "CrazeeFood",
+      "inStock": true,
+      "attributes": [{"name":"Protein","value":"10g per cookie"}],
+      "shortDesc": "High-protein peanut butter cookie for active snacking.",
+      "longDesc": "Packed with peanut flavor and extra protein to keep you fueled.",
+      "dateAdded": "2025-11-12",
+      "hidden": false
     }
   ]
 }
