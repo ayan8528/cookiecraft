@@ -17,7 +17,9 @@ a{color:var(--brand);text-decoration:none}
 .btn-primary{background:var(--brand);color:#fff}
 .btn-ghost{background:#fff;border:1px solid var(--border)}
 .input,select{width:100%;padding:10px;border-radius:12px;border:1px solid var(--border);background:#fff}
-.badge{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--accent);color:#3a2a0a;font-size:12px}
-.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.sticky{position:sticky;top:64px}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--accent);color:#3a2a0a;font-size:12px}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.card{padding:12px;transition: transform .18s ease, box-shadow .18s ease}
+.card:hover{transform: translateY(-6px);box-shadow: 0 8px 30px rgba(15,23,42,.08)}
 img{max-width:100%;display:block}
+header a{color:var(--ink)}
