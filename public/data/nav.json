@@ -1,0 +1,8 @@
+{
+  "links": [
+    { "label": "Home", "to": "/" },
+    { "label": "Shop", "to": "/shop" },
+    { "label": "Vegan", "to": "/shop?category=vegan" },
+    { "label": "Contact", "to": "/#contact" }
+  ]
+}

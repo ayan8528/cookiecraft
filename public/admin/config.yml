@@ -1,58 +1,75 @@
 backend:
   name: git-gateway
   branch: main
-
-media_folder: "public/uploads"   # Where images are saved in the repo
-public_folder: "/uploads"        # How the site will reference them
-
-site_url: "/"                    # optional but safe
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
 collections:
-  - name: "home"
-    label: "Home"
-    editor:
-      preview: false
+  - name: "settings"
+    label: "Site Settings"
+    editor: { preview: false }
     files:
-      - file: "public/data/home.json"
-        label: "Home Page Content"
-        name: "homecontent"
+      - file: "public/data/settings.json"
+        label: "General"
+        name: "settings"
         fields:
-          - { label: "Hero Title", name: "heroTitle", widget: "string" }
-          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
-          - { label: "CTA Label", name: "heroCta", widget: "string", default: "Shop now" }
-          - { label: "Hero Image", name: "heroImage", widget: "image" }
-          - label: "Promos"
-            name: "promos"
-            widget: "list"
+          - { label: "Brand Name", name: "brandName", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Primary Color", name: "primary", widget: "string", default: "#2b7a0b" }
+          - { label: "Accent Color", name: "accent", widget: "string", default: "#e3b26c" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - label: Social
+            name: social
+            widget: object
+            fields:
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+          - label: SEO
+            name: seo
+            widget: object
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
 
-  - name: "categories"
-    label: "Categories"
-    label_singular: "Category"
-    editor:
-      preview: false
+  - name: "navigation"
+    label: "Navigation"
+    editor: { preview: false }
     files:
-      - file: "public/data/categories.json"
-        label: "Categories List"
-        name: "categorieslist"
+      - file: "public/data/nav.json"
+        label: "Header Links"
+        name: "nav"
+        fields:
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "To", name: "to", widget: "string" }
+
+  - name: "reviews"
+    label: "Reviews"
+    editor: { preview: false }
+    files:
+      - file: "public/data/reviews.json"
+        label: "Customer Reviews"
+        name: "reviews"
         fields:
           - label: "Items"
             name: "items"
             widget: "list"
             fields:
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Slug", name: "slug", widget: "string" }
-              - { label: "Color", name: "color", widget: "string", default: "#e3b26c" }
+              - { label: "Rating (1-5)", name: "rating", widget: "number", value_type: "int", min: 1, max: 5 }
+              - { label: "Text", name: "text", widget: "text" }
 
+  # keep your existing Home / Categories / Products collections,
+  # but add fields in Products:
   - name: "products"
     label: "Products"
-    label_singular: "Product"
-    editor:
-      preview: false
+    editor: { preview: false }
     files:
       - file: "public/data/products.json"
         label: "Products List"
@@ -68,6 +85,8 @@ collections:
               - { label: "Category Slug", name: "category", widget: "string" }
               - { label: "Price", name: "price", widget: "number", value_type: "int" }
               - { label: "Sale Price", name: "salePrice", widget: "number", value_type: "int", required: false }
+              - { label: "Date Added", name: "dateAdded", widget: "date", format: "YYYY-MM-DD" }
+              - { label: "Hidden", name: "hidden", widget: "boolean", default: false, required: false }
               - label: "Badges"
                 name: "badges"
                 widget: "list"
@@ -92,7 +111,7 @@ collections:
                 widget: "list"
                 field: { label: "Image", name: "image", widget: "image" }
               - { label: "SKU", name: "sku", widget: "string", required: false }
-              - { label: "Brand", name: "brand", widget: "string", default: "CookieCraft", required: false }
+              - { label: "Brand", name: "brand", widget: "string", default: "CrazeeFood", required: false }
               - { label: "In Stock", name: "inStock", widget: "boolean", default: true }
               - label: "Attributes"
                 name: "attributes"

@@ -1,0 +1,18 @@
+{
+  "brandName": "CrazeeFood",
+  "tagline": "Freshly baked goodness — delivered.",
+  "logo": "/icons/icon-192.png",
+  "primary": "#2b7a0b",
+  "accent": "#e3b26c",
+  "phone": "+91-90000-00000",
+  "email": "hello@crazeefood.in",
+  "address": "Lucknow, Uttar Pradesh",
+  "social": {
+    "instagram": "https://instagram.com/crazeefood",
+    "facebook": "https://facebook.com/crazeefood"
+  },
+  "seo": {
+    "title": "CrazeeFood — Premium Cookies",
+    "description": "Handcrafted cookies with real butter and premium chocolate. Order online — fresh, fast, delicious."
+  }
+}
